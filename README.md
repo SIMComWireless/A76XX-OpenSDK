@@ -1,5 +1,5 @@
 
-<img src="https://www.simcom.com/Uploads/image/20210319/6054031fc1c9e.png" style="background-color:rgb(251, 252, 252); padding: 5px;" width="100">
+<img src="_htmresc/simcom_logo.png" style="background-color:rgb(251, 252, 252); padding: 5px;" width="100">
 
 <h1 style="text-align:center">A76XX OpenSDK</h1>
 
@@ -13,7 +13,7 @@ A76XX OpenSDK solution is based on A76XX CAT-1 module which allows customer to r
 
 [OpenSDK Download](#opensdk-download)
 
-[OpenSDK Compile and Flash](#opensdk-compile-and-flash)
+[OpenSDK Compile and Image Update](#)
 
 ## OpenSDK Supported Features
 
