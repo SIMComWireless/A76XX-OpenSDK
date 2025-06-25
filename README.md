@@ -62,7 +62,9 @@ A76XX OpenSDK solution is based on A76XX CAT-1 module which allows customer to r
 |POC|POC application with PCM play\record|see `demo_poc.c`
 |Public lib|cjson\zlib\sm2\miracl|see `demo_zlib.c\demo_cjson.c\demo_crypto.c`
 |OneWire|Onewire protocol for sensor like DS18B20|see `demo_onewire.c`
+
 <br>
+
 # OpenSDK Hardware Design Manual
 <br>
 A hardware design manual is usually needed when a developer starts to evaluate the peripheral interfaces used for application.With SIMCom A76XX CAT-1 module there are 2 typical applications,Standard and OpenSDK.For standard application there is a host processor(CPU\MCU\MPU) which will comunicate with module over AT cmd via UART\USB interface, while for OpenSDK application usually there is no external host to control module and it runs application code to manage avaliable peripherals inside module. The hardware design manual(HD) for both application is different due to some IO\feature differences.
@@ -71,6 +73,7 @@ You can request OpenSDK HD for specific modules from [SIMCom support team](https
 
 [OpenSDK HD](https://1drv.ms/f/c/1964fa2b798f638e/EjjekV7eIWFIsTU_6Qdv4NQByvkphD0XEcp4LE92QgxZiQ?e=5uMjff)
 <br>
+
 # OpenSDK Architecture
 <br>
 <img src="_htmresc/OpenSDK_Architecture.png" style="background-color:rgb(252, 251, 251); padding: 5px;" width="250">
