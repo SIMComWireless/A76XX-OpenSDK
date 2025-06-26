@@ -16,6 +16,7 @@ A76XX OpenSDK solution is based on A76XX CAT-1 module which allows customer to r
  - [SDK Image Update](#sdk-image-update)<br>
   
 [OpenSDK Debug](#opensdk-debug)<br>
+[OpenSDK Demo](#opensdk-demo)<br>
 
 # OpenSDK Supported Features
 <br>
@@ -167,7 +168,7 @@ For a starter you can download SDK for [A7672E_FASE series](https://1drv.ms/u/c/
    |---|---|
    |SIMCOM PROTOCOL VERSION|Choose demo code version,V1 or V2|
    |BUILD SIMCOM DEMO|Choose whether need to build simcom demos|
-   |API TEST|For simcom internal use,default enabled|
+   |API TEST|For simcom internal use,default disabled|
    |DEMO UI communication port|Choose which port for UI CLI,main UART or USB_AT port|
    |Demo for driver|Switch for peripheral device drivers to compile|
    |Demo for modem|Switch for modem services to compile|
@@ -196,3 +197,22 @@ After successful compiling,you will find some .zip file in out\\\<target\>\\ fol
 
 # OpenSDK Debug
 <br>
+
+   - [CATStudio Tool](https://1drv.ms/u/c/1964fa2b798f638e/EY5jj3kr-mQggBkPbQAAAAABbmcxWfisOklt7nOkxJBmPA?e=rjUFUL) could be used to take logs from module USB Diagnostics port, you can download video user guide from [CATStudio User Guide](https://1drv.ms/v/c/1964fa2b798f638e/EY5jj3kr-mQggBmAIgAAAAAB_27O2Evml_ynFqIrV-2JnA?e=oJkPnW),for the database file(cp_MDB.txt) which is needed to configure for CATStudio tool please get from \<SDK>SIMCOM_SDK_SET\kernel\\<target\>\cp_MDB.txt.<br>
+   The logs output with `sAPI_Debug` can be filtered from CATStudio log when you search key word "CUST" from LogViewer window(Ctrl+F).<br>
+   ![CUST](_htmresc/catstudio_cust.png) <br><br>
+   - If you want to filter the PCAP file which is useful to analyze network data stream,need to export the CATStudio log and open it again with offline mode,please get [CATStudio FIlter pcap](https://1drv.ms/v/c/1964fa2b798f638e/EY5jj3kr-mQggBmNKQAAAAABr7cxqJ8PkCS8I1VyZcFxFg?e=pujwdg).<br>
+   - For software crash issue,usually we need the dump file from module.You need to set `sAPI_enableDUMP` API to enable DUMP mode in begining of application,when crash happens, please follow [A76XX DUMP GRAB Guide](https://1drv.ms/b/c/1964fa2b798f638e/EY5jj3kr-mQggBluJAAAAAABvQx546oSjTRTzfxg--GezQ?e=QVaVBN) to take dump file and send it to SIMCom FAE together with CATStudio logs recorded and whole files from SDK out folder which contains memory map file.<br>
+
+# OpenSDK Demo
+   As default with SDK there will be a series of demo running with CLI(Command Line Interface) with main UART(115200,8-bit,no priority,1 stop-bit) or USB_AT port according to the `DEMO UI communication port` setting,you can select and input number of item to run the demos,for more details please refer to `simcom_demo.c`\\`uart_api.c`\\`demo_xx.c`.<br>
+   ![demo](_htmresc/demo.png)<br>
+   If select to use V2 demo,you can also use UI tool for demo show,please install the tool `simcomDemoLinkerV2.exe` from tools\\win32 folder and open it, the tool will automatically search the main UART or USB_AT port,later you can double click to select the demo items and click Do button to run it.<br>
+   ![demo_v2](_htmresc/demo_v2.png)<br>
+
+# Q&A
+
+- ### What is the RTOS running inside module?How to define the task priority for my application?
+  It is ThreadX version 5.1 with 5ms as system tick,the lower task priority value is,the higher priority for task,the OS support task preemption so task with higher priority will preempt CPU when it is in ready state,tasks with same priority will follow FIFO scheduling.There are tasks with higher priority created by SIMCom RD to manage the module(we call them system tasks,priority less than 120),for these tasks they cannot be interrupted for a long time so for customer application the priority should not be defined too high,we suggest the range 150--250.<br>
+- ### Multiple definition issue for `close` API
+  Need to check if you have included both `unistd.h` and `scfw_socket.h`,because `unistd.h` is for Linux and we do not have such integration for`scfw_socket.h`.
