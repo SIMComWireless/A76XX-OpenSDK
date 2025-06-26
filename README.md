@@ -107,6 +107,7 @@ You can request OpenSDK HD for specific modules from [SIMCom support team](https
 |old_fw_Makefile|make file for old version of SDK(A011),now not in use|
 |sc_application.c|code entry for customer application|
 <br>
+
 # OpenSDK Download
 <br>
 
