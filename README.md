@@ -218,7 +218,7 @@ In this repo, there will be continuous maintenance examples besides simcom demo 
 
 # Q&A
 
-- ### What is the RTOS running inside module?How to define the task priority for my application?
-  It is ThreadX version 5.1 with 5ms as system tick, the lower task priority value is, the higher priority for task, the OS support task preemption so task with higher priority will preempt CPU when it is in ready state, tasks with same priority will follow FIFO scheduling. There are tasks with higher priority created by SIMCom RD to manage the module (we call them system tasks, priority less than 120), for these tasks they cannot be interrupted for a long time so for customer application the priority should not be defined too high, we suggest the range 150--250.<br>
+- ### What is the RTOS running inside module? How to define the task priority for my application?
+  It is ThreadX version 5.1 with 5ms as system tick, the lower task priority value is, the higher priority for task, the OS support task preemption so task with higher priority will preempt CPU when it is in ready state, tasks with same priority will follow FIFO scheduling. There are tasks with higher priority created by SIMCom R&D to manage the module (we call them system tasks, priority less than 120), for these tasks they cannot be interrupted for a long time so for customer application the priority should not be defined too high, we suggest the range 150--250.<br>
 - ### Multiple definition issue for `close` API
   Need to check if you have included both `unistd.h` and `scfw_socket.h`, because `unistd.h` is for Linux and we do not have such integration for`scfw_socket.h`.
