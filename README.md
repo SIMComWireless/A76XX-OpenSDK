@@ -222,3 +222,13 @@ In this repo, there will be continuous maintenance examples besides simcom demo 
   It is ThreadX version 5.1 with 5ms as system tick, the lower task priority value is, the higher priority for task, the OS support task preemption so task with higher priority will preempt CPU when it is in ready state, tasks with same priority will follow FIFO scheduling. There are tasks with higher priority created by SIMCom R&D to manage the module (we call them system tasks, priority less than 120), for these tasks they cannot be interrupted for a long time so for customer application the priority should not be defined too high, we suggest the range 150--250.<br>
 - ### Multiple definition issue for `close` API
   Need to check if you have included both `unistd.h` and `scfw_socket.h`, because `unistd.h` is for Linux and we do not have such integration for`scfw_socket.h`.
+- ### How to check RAM size from current SDK?
+  Open corresponding ld file from \<SDK\>SIMCOM_SDK_SET\config folder,find MEMORY tag and the LENGTH shows the RAM size for current SDK in bytes.
+  `
+  MEMORY
+   {
+    ram(RW) : ORIGIN = 0x7e9d0000, LENGTH = 0x80000
+   }
+   `
+- ### How to check HEAP size from current SDK?
+  The SDK HEAP is shared with system and customer SDK application,so the size is dynamically changed,you could use `sAPI_getSystemInfo` to read current remaning heap size,also CPU usage rate.
