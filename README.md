@@ -122,7 +122,7 @@ For a starter you can download SDK for [A7672E_FASE series](https://1drv.ms/u/c/
 # OpenSDK Compile and Image Update
 <br>
 
-**⚠️ Note: Please make sure no non-ASICC and space character in SDK path**
+**⚠️ Note: Please avoid having non-ASCII characters or spaces in SDK path**
 ## *SDK Compile under Windows OS*
 1. Please copy GNUmake.exe file from SDK root path to `C:\Windows\System32` and `C:\Windows\SysWOW64` folders.
 2. Run CMD line and check `gnumake -v` command to see if gnumake tool has been installed well. You will see following messages if gnumake is correctly installed.
