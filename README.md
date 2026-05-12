@@ -28,151 +28,151 @@ A76XX OpenSDK solution is based on A76XX CAT-1 module which allows customer to r
 
 | File | Description |
 |------|-------------|
-| [simcom_demo.md](_htmresc\simcom_demo.md) | Central demo task manager and interactive CLI UI framework |
-| [uart_api.md](_htmresc\uart_api.md) | UART initialization, circular data cache, and input reading helpers |
-| [cus_urc.md](_htmresc\cus_urc.md) | URC (Unsolicited Result Code) processing framework |
-| [cus_usb_vcom.md](_htmresc\cus_usb_vcom.md) | USB Virtual COM Port communication |
-| [demo_helloworld.md](_htmresc\demo_helloworld.md) | Minimal entry-point demo for getting started |
+| [simcom_demo.md](_htmresc/simcom_demo.md) | Central demo task manager and interactive CLI UI framework |
+| [uart_api.md](_htmresc/uart_api.md) | UART initialization, circular data cache, and input reading helpers |
+| [cus_urc.md](_htmresc/cus_urc.md) | URC (Unsolicited Result Code) processing framework |
+| [cus_usb_vcom.md](_htmresc/cus_usb_vcom.md) | USB Virtual COM Port communication |
+| [demo_helloworld.md](_htmresc/demo_helloworld.md) | Minimal entry-point demo for getting started |
 
 ## Bluetooth & BLE
 
 | File | Description |
 |------|-------------|
-| [demo_bt.md](_htmresc\demo_bt.md) | Classic Bluetooth: adapter control, inquiry, pairing, SPP |
-| [demo_bt_stack.md](_htmresc\demo_bt_stack.md) | BTstack dual-mode: BT + BLE peripheral/central GATT |
-| [demo_ble.md](_htmresc\demo_ble.md) | Standalone BLE: advertising, custom GATT service, notify/indicate |
+| [demo_bt.md](_htmresc/demo_bt.md) | Classic Bluetooth: adapter control, inquiry, pairing, SPP |
+| [demo_bt_stack.md](_htmresc/demo_bt_stack.md) | BTstack dual-mode: BT + BLE peripheral/central GATT |
+| [demo_ble.md](_htmresc/demo_ble.md) | Standalone BLE: advertising, custom GATT service, notify/indicate |
 
 ## Audio & Voice
 
 | File | Description |
 |------|-------------|
-| [demo_audio.md](_htmresc\demo_audio.md) | Audio playback, recording, volume, mic gain, echo suppression |
-| [demo_tts.md](_htmresc\demo_tts.md) | Text-to-Speech playback and parameter control |
-| [demo_call.md](_htmresc\demo_call.md) | Voice call: dial, answer, hang up, auto-answer, DTMF |
-| [demo_poc.md](_htmresc\demo_poc.md) | Push-to-Talk (POC): low-level PCM playback and recording |
+| [demo_audio.md](_htmresc/demo_audio.md) | Audio playback, recording, volume, mic gain, echo suppression |
+| [demo_tts.md](_htmresc/demo_tts.md) | Text-to-Speech playback and parameter control |
+| [demo_call.md](_htmresc/demo_call.md) | Voice call: dial, answer, hang up, auto-answer, DTMF |
+| [demo_poc.md](_htmresc/demo_poc.md) | Push-to-Talk (POC): low-level PCM playback and recording |
 
 ## Messaging
 
 | File | Description |
 |------|-------------|
-| [demo_sms.md](_htmresc\demo_sms.md) | SMS full lifecycle: init, write, read, send, delete, PDU encoding |
+| [demo_sms.md](_htmresc/demo_sms.md) | SMS full lifecycle: init, write, read, send, delete, PDU encoding |
 
 ## Networking & TCP/IP
 
 | File | Description |
 |------|-------------|
-| [demo_network.md](_htmresc\demo_network.md) | Cellular network management: CSQ, CREG, APN, PDP, PSM |
-| [demo_tcpip.md](_htmresc\demo_tcpip.md) | TCP/UDP sockets, DNS resolution, dual-stack IPv4/IPv6 |
-| [demo_ping.md](_htmresc\demo_ping.md) | ICMP ping with callback-based result reporting |
-| [demo_pppd.md](_htmresc\demo_pppd.md) | PPP dial-up for GPRS data connection |
+| [demo_network.md](_htmresc/demo_network.md) | Cellular network management: CSQ, CREG, APN, PDP, PSM |
+| [demo_tcpip.md](_htmresc/demo_tcpip.md) | TCP/UDP sockets, DNS resolution, dual-stack IPv4/IPv6 |
+| [demo_ping.md](_htmresc/demo_ping.md) | ICMP ping with callback-based result reporting |
+| [demo_pppd.md](_htmresc/demo_pppd.md) | PPP dial-up for GPRS data connection |
 
 ## MQTT
 
 | File | Description |
 |------|-------------|
-| [demo_mqtt.md](_htmresc\demo_mqtt.md) | MQTT/MQTTS: connect, publish, subscribe, Aliyun/Tencent/OneNET demos |
-| [demo_auto_mqtt.md](_htmresc\demo_auto_mqtt.md) | Automated MQTT stress test with offline notification |
-| [mqtt_OneNET.md](_htmresc\mqtt_OneNET.md) | OneNET cloud platform integration with HMAC-SHA1 token |
-| [mqtt_tencent.md](_htmresc\mqtt_tencent.md) | Tencent Cloud IoT integration with HMAC-SHA1 auth |
+| [demo_mqtt.md](_htmresc/demo_mqtt.md) | MQTT/MQTTS: connect, publish, subscribe, Aliyun/Tencent/OneNET demos |
+| [demo_auto_mqtt.md](_htmresc/demo_auto_mqtt.md) | Automated MQTT stress test with offline notification |
+| [mqtt_OneNET.md](_htmresc/mqtt_OneNET.md) | OneNET cloud platform integration with HMAC-SHA1 token |
+| [mqtt_tencent.md](_htmresc/mqtt_tencent.md) | Tencent Cloud IoT integration with HMAC-SHA1 auth |
 
 ## HTTP / HTTPS / FTPS
 
 | File | Description |
 |------|-------------|
-| [demo_https.md](_htmresc\demo_https.md) | HTTP/HTTPS client: GET, POST, file upload, header management |
-| [demo_ftps.md](_htmresc\demo_ftps.md) | FTP/FTPS: login, list, download, upload, directory operations |
-| [demo_ftps_test.md](_htmresc\demo_ftps_test.md) | Automated FTPS stress test with semaphore-driven task loop |
-| [demo_htp.md](_htmresc\demo_htp.md) | HTTP Time Protocol client for time synchronization |
+| [demo_https.md](_htmresc/demo_https.md) | HTTP/HTTPS client: GET, POST, file upload, header management |
+| [demo_ftps.md](_htmresc/demo_ftps.md) | FTP/FTPS: login, list, download, upload, directory operations |
+| [demo_ftps_test.md](_htmresc/demo_ftps_test.md) | Automated FTPS stress test with semaphore-driven task loop |
+| [demo_htp.md](_htmresc/demo_htp.md) | HTTP Time Protocol client for time synchronization |
 
 ## SSL / TLS
 
 | File | Description |
 |------|-------------|
-| [demo_ssl.md](_htmresc\demo_ssl.md) | SSL/TLS: one-way and two-way authentication, handshake, read/send |
-| [demo_ssl_test.md](_htmresc\demo_ssl_test.md) | Automated SSL stress test |
+| [demo_ssl.md](_htmresc/demo_ssl.md) | SSL/TLS: one-way and two-way authentication, handshake, read/send |
+| [demo_ssl_test.md](_htmresc/demo_ssl_test.md) | Automated SSL stress test |
 
 ## Time & Location
 
 | File | Description |
 |------|-------------|
-| [demo_ntp.md](_htmresc\demo_ntp.md) | NTP time synchronization |
-| [demo_rtc.md](_htmresc\demo_rtc.md) | Real-time clock: set/get time, alarm, UTC conversion |
-| [demo_gps.md](_htmresc\demo_gps.md) | GNSS control: power, modes, AGPS, ephemeris, constellation config |
-| [demo_loc.md](_htmresc\demo_loc.md) | LBS location via cell tower triangulation |
-| [demo_loc_test.md](_htmresc\demo_loc_test.md) | LBS automated test with background task |
+| [demo_ntp.md](_htmresc/demo_ntp.md) | NTP time synchronization |
+| [demo_rtc.md](_htmresc/demo_rtc.md) | Real-time clock: set/get time, alarm, UTC conversion |
+| [demo_gps.md](_htmresc/demo_gps.md) | GNSS control: power, modes, AGPS, ephemeris, constellation config |
+| [demo_loc.md](_htmresc/demo_loc.md) | LBS location via cell tower triangulation |
+| [demo_loc_test.md](_htmresc/demo_loc_test.md) | LBS automated test with background task |
 
 ## GPIO & Peripherals
 
 | File | Description |
 |------|-------------|
-| [demo_gpio.md](_htmresc\demo_gpio.md) | GPIO: direction, level, interrupt, wakeup, bulk pin test |
-| [demo_i2c.md](_htmresc\demo_i2c.md) | I2C bus read/write with NAU8810 codec target |
-| [demo_spi.md](_htmresc\demo_spi.md) | SPI: flash ID, NOR flash, and NAND flash operations |
-| [demo_uart.md](_htmresc\demo_uart.md) | UART: baud/data/parity/stop config, sleep control, RS485 |
-| [demo_pwm.md](_htmresc\demo_pwm.md) | PWM output: frequency and duty cycle control |
-| [demo_onewire.md](_htmresc\demo_onewire.md) | 1-Wire protocol for CT1820B temperature sensor |
+| [demo_gpio.md](_htmresc/demo_gpio.md) | GPIO: direction, level, interrupt, wakeup, bulk pin test |
+| [demo_i2c.md](_htmresc/demo_i2c.md) | I2C bus read/write with NAU8810 codec target |
+| [demo_spi.md](_htmresc/demo_spi.md) | SPI: flash ID, NOR flash, and NAND flash operations |
+| [demo_uart.md](_htmresc/demo_uart.md) | UART: baud/data/parity/stop config, sleep control, RS485 |
+| [demo_pwm.md](_htmresc/demo_pwm.md) | PWM output: frequency and duty cycle control |
+| [demo_onewire.md](_htmresc/demo_onewire.md) | 1-Wire protocol for CT1820B temperature sensor |
 
 ## Display & Camera
 
 | File | Description |
 |------|-------------|
-| [demo_lcd.md](_htmresc\demo_lcd.md) | LCD display: ST7735S, ST7789V, ST7567A, ST7796u controllers |
-| [demo_cam.md](_htmresc\demo_cam.md) | Camera: capture, preview, barcode scanning |
-| [demo_cam_dirver.md](_htmresc\demo_cam_dirver.md) | Custom GC032A camera sensor driver with register tables |
+| [demo_lcd.md](_htmresc/demo_lcd.md) | LCD display: ST7735S, ST7789V, ST7567A, ST7796u controllers |
+| [demo_cam.md](_htmresc/demo_cam.md) | Camera: capture, preview, barcode scanning |
+| [demo_cam_dirver.md](_htmresc/demo_cam_dirver.md) | Custom GC032A camera sensor driver with register tables |
 
 ## SIM & Telecom
 
 | File | Description |
 |------|-------------|
-| [demo_simcard.md](_htmresc\demo_simcard.md) | SIM card: PIN, ICCID, IMSI, hot-swap, CRSM, dual-SIM |
-| [demo_sjdr.md](_htmresc\demo_sjdr.md) | RF jamming detection with callback notification |
+| [demo_simcard.md](_htmresc/demo_simcard.md) | SIM card: PIN, ICCID, IMSI, hot-swap, CRSM, dual-SIM |
+| [demo_sjdr.md](_htmresc/demo_sjdr.md) | RF jamming detection with callback notification |
 
 ## Wi-Fi
 
 | File | Description |
 |------|-------------|
-| [demo_wifi_ap.md](_htmresc\demo_wifi_ap.md) | Wi-Fi AP configuration: SSID, WPA2, client management |
-| [demo_wifiscan.md](_htmresc\demo_wifiscan.md) | Wi-Fi scanning for location services (RSSI, MAC, channel) |
+| [demo_wifi_ap.md](_htmresc/demo_wifi_ap.md) | Wi-Fi AP configuration: SSID, WPA2, client management |
+| [demo_wifiscan.md](_htmresc/demo_wifiscan.md) | Wi-Fi scanning for location services (RSSI, MAC, channel) |
 
 ## Security & Crypto
 
 | File | Description |
 |------|-------------|
-| [demo_crypto.md](_htmresc\demo_crypto.md) | Hardware crypto engine: AES, random number generation |
-| [demo_mbedtls.md](_htmresc\demo_mbedtls.md) | mbedTLS: RSA encrypt/decrypt, AES-ECB, MD hash |
-| [demo_sm2.md](_htmresc\demo_sm2.md) | SM2 elliptic curve: key generation, encrypt, decrypt |
+| [demo_crypto.md](_htmresc/demo_crypto.md) | Hardware crypto engine: AES, random number generation |
+| [demo_mbedtls.md](_htmresc/demo_mbedtls.md) | mbedTLS: RSA encrypt/decrypt, AES-ECB, MD hash |
+| [demo_sm2.md](_htmresc/demo_sm2.md) | SM2 elliptic curve: key generation, encrypt, decrypt |
 
 ## File System & Storage
 
 | File | Description |
 |------|-------------|
-| [demo_file_system.md](_htmresc\demo_file_system.md) | File operations: open, read, write, stat, directory listing |
-| [demo_flash.md](_htmresc\demo_flash.md) | Flash memory: erase, read, write raw sectors |
-| [demo_exfs.md](_htmresc\demo_exfs.md) | External flash file system mounting (NOR LFS, NAND YAFFS) |
+| [demo_file_system.md](_htmresc/demo_file_system.md) | File operations: open, read, write, stat, directory listing |
+| [demo_flash.md](_htmresc/demo_flash.md) | Flash memory: erase, read, write raw sectors |
+| [demo_exfs.md](_htmresc/demo_exfs.md) | External flash file system mounting (NOR LFS, NAND YAFFS) |
 
 ## Firmware Update
 
 | File | Description |
 |------|-------------|
-| [demo_fota.md](_htmresc\demo_fota.md) | Firmware OTA: FTP/HTTP/local update, image write, verify |
-| [demo_app_download.md](_htmresc\demo_app_download.md) | App firmware download and package management |
-| [demo_app_updater.md](_htmresc\demo_app_updater.md) | App firmware update from downloaded package |
+| [demo_fota.md](_htmresc/demo_fota.md) | Firmware OTA: FTP/HTTP/local update, image write, verify |
+| [demo_app_download.md](_htmresc/demo_app_download.md) | App firmware download and package management |
+| [demo_app_updater.md](_htmresc/demo_app_updater.md) | App firmware update from downloaded package |
 
 ## Power & System
 
 | File | Description |
 |------|-------------|
-| [demo_pm.md](_htmresc\demo_pm.md) | Power management: power key, ADC, VBAT, VDD_AUX, reset |
-| [demo_wtd.md](_htmresc\demo_wtd.md) | Watchdog timer: timeout, enable, feed, disable |
-| [demo_txrx_power.md](_htmresc\demo_txrx_power.md) | RF TX/RX power level measurement (FALCON_1803 only) |
-| [demo_system.md](_htmresc\demo_system.md) | System info: task stack monitoring |
+| [demo_pm.md](_htmresc/demo_pm.md) | Power management: power key, ADC, VBAT, VDD_AUX, reset |
+| [demo_wtd.md](_htmresc/demo_wtd.md) | Watchdog timer: timeout, enable, feed, disable |
+| [demo_txrx_power.md](_htmresc/demo_txrx_power.md) | RF TX/RX power level measurement (FALCON_1803 only) |
+| [demo_system.md](_htmresc/demo_system.md) | System info: task stack monitoring |
 
 ## Data Processing
 
 | File | Description |
 |------|-------------|
-| [demo_cjson.md](_htmresc\demo_cjson.md) | cJSON: parse, create, modify JSON documents |
-| [demo_zlib.md](_htmresc\demo_zlib.md) | zlib: compress/decompress, zip file creation and extraction |
+| [demo_cjson.md](_htmresc/demo_cjson.md) | cJSON: parse, create, modify JSON documents |
+| [demo_zlib.md](_htmresc/demo_zlib.md) | zlib: compress/decompress, zip file creation and extraction |
 
 <br>
 
