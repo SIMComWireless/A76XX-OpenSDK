@@ -183,7 +183,7 @@ A hardware design manual is usually needed when a developer starts to evaluate t
 
 You can request OpenSDK HD for specific modules from [SIMCom support team](https://en.simcom.com/service_cat-20.html). Here are some general OpenSDK HD files for A7672x/A7602x/A7683x/A7676x series (continue updating).
 
-[OpenSDK HD](https://1drv.ms/f/c/1964fa2b798f638e/EjjekV7eIWFIsTU_6Qdv4NQByvkphD0XEcp4LE92QgxZiQ?e=5uMjff)
+[OpenSDK HD](https://1drv.ms/f/c/1964fa2b798f638e/IgA43pFe3iFhSLE1P-kHb-DUAcr5KYQ9FxHKeCxPdkIMWYk?e=q6OxtH)
 <br>
 
 # OpenSDK Architecture
@@ -224,7 +224,7 @@ You can request OpenSDK HD for specific modules from [SIMCom support team](https
 <br>
 
 As the memory size / supported features / pin-map are different with SIMCom A76XX CAT-1 modules, the SDK is not the same, you need to get correct SDK according to the modules you are testing with from SIMCom FAE, or you can request from [SIMCom support team](https://en.simcom.com/service_cat-20.html).
-For a starter you can download SDK for [A7672E_FASE series](https://1drv.ms/u/c/1964fa2b798f638e/Ea7ewzYUAE1FjetKI9B0BloByShniIUSHx_LJs3fYTpUEQ?e=JKU6Y9) for trail purpose.
+For a starter you can download SDK for [A7672E_FASE series](https://1drv.ms/u/c/1964fa2b798f638e/IQCCYFbxjsYKQbq7AyYSdBUOAXXKTl1SVQk83_p4krdco-8?e=I5NbMg) for trail purpose.
 
 <br>
 
@@ -302,18 +302,18 @@ For a starter you can download SDK for [A7672E_FASE series](https://1drv.ms/u/c/
 
 Please make sure Linux has installed make and python tool, it is similar as with Windows, you need cd to \<SDK\>\SIMCOM_SDK_SET\ and run `make`, for first time compiling it will setup the enviroment automatically, later it will list the help info including supported module list with current SDK, then run `make <target>` to start compiling, the target string must be one of supported module list after running `make`. For example `make A7672E_MASA_1603_V101_OPENSDK`, when finished and without error, will get "build success!!" in end of cmd terminal.
 ## *SDK Image Update*
-After successful compiling, you will find some .zip file in out\\\<target\>\\ folder, the burn.zip should be flashed to module, and the burn_factory.zip file is only used when you need to flash SDK FW with your application in SIMCom factory. To flash burn.zip file, currently only Windows tool is avaliable, need to download SIMCom MADL tool from [here](https://1drv.ms/f/c/1964fa2b798f638e/EtW9qCYHss9Fq6iqoo_T_DkBTYLXsLHvE66XNyu6sLsgZA?e=RL3AVg), follow the user guide inside tool package to flash image.<br><br>
+After successful compiling, you will find some .zip file in out\\\<target\>\\ folder, the burn.zip should be flashed to module, and the burn_factory.zip file is only used when you need to flash SDK FW with your application in SIMCom factory. To flash burn.zip file, currently only Windows tool is avaliable, need to download SIMCom MADL tool from [here](https://1drv.ms/u/c/1964fa2b798f638e/IQDFpfxSpaT6RJh6e9g3bwRaAXII_4y2CqM81BXHP-Px2XQ?e=oAkic9), follow the user guide inside tool package to flash image.<br><br>
 <img src="_htmresc/update.png" style="background-color:rgb(251, 252, 252); padding: 1px;" width="500">
 <br>
 
 # OpenSDK Debug
 <br>
 
-   - [CATStudio Tool](https://1drv.ms/u/c/1964fa2b798f638e/EY5jj3kr-mQggBkPbQAAAAABbmcxWfisOklt7nOkxJBmPA?e=rjUFUL) could be used to take logs from module USB Diagnostics port, you can download video user guide from [CATStudio User Guide](https://1drv.ms/v/c/1964fa2b798f638e/EY5jj3kr-mQggBmAIgAAAAAB_27O2Evml_ynFqIrV-2JnA?e=oJkPnW), for the database file (cp_MDB.txt) which is needed to configure for CATStudio tool please get from \<SDK>SIMCOM_SDK_SET\kernel\\<target\>\cp_MDB.txt.<br>
+   - [CATStudio Tool](https://1drv.ms/u/c/1964fa2b798f638e/IQDcRDh_D3WRR47w5n1oiXedAUn6cxzrSWH09EP3a1vGnzo?e=70e6YU) could be used to take logs from module USB Diagnostics port, you can download video user guide from [CATStudio User Guide](https://1drv.ms/v/c/1964fa2b798f638e/IQCOY495K_pkIIAZgCIAAAAAAf9uzthL5pf8pxaiK1ftiZw?e=rJeZh4), for the database file (cp_MDB.txt) which is needed to configure for CATStudio tool please get from \<SDK>SIMCOM_SDK_SET\kernel\\<target\>\cp_MDB.txt.<br>
    The logs output with `sAPI_Debug` can be filtered from CATStudio log when you search key word "CUST" from LogViewer window (Ctrl+F).<br>
    ![CUST](_htmresc/catstudio_cust.png) <br><br>
-   - If you want to filter the PCAP file which is useful to analyze network data stream, need to export the CATStudio log and open it again with offline mode, please get [CATStudio FIlter pcap](https://1drv.ms/v/c/1964fa2b798f638e/EY5jj3kr-mQggBmNKQAAAAABr7cxqJ8PkCS8I1VyZcFxFg?e=pujwdg).<br>
-   - For software crash issue, usually we need the dump file from module. You need to set `sAPI_enableDUMP` API to enable DUMP mode in begining of application, when crash happens, please follow [A76XX DUMP GRAB Guide](https://1drv.ms/b/c/1964fa2b798f638e/EY5jj3kr-mQggBluJAAAAAABvQx546oSjTRTzfxg--GezQ?e=QVaVBN) to take dump file and send it to SIMCom FAE together with CATStudio logs recorded and whole files from SDK out folder which contains memory map file.<br>
+   - If you want to filter the PCAP file which is useful to analyze network data stream, need to export the CATStudio log and open it again with offline mode, please get [CATStudio FIlter pcap](https://1drv.ms/v/c/1964fa2b798f638e/IQCOY495K_pkIIAZjSkAAAAAAa-3MaifD5AkvCNVcmXBcRY?e=hmYlLm).<br>
+   - For software crash issue, usually we need the dump file from module. You need to set `sAPI_enableDUMP` API to enable DUMP mode in begining of application, when crash happens, please follow [A76XX DUMP GRAB Guide](https://1drv.ms/f/c/1964fa2b798f638e/IgCOY495K_pkIIAZaSQAAAAAAWvJcgBhaE4hBivCKUJg99o?e=QkkxOS) to take dump file and send it to SIMCom FAE together with CATStudio logs recorded and whole files from SDK out folder which contains memory map file.<br>
 
 # OpenSDK Demo
    As default with SDK there will be a series of demo running with CLI (Command Line Interface) with main UART (115200, 8-bit, no priority, 1 stop-bit) or USB_AT port according to the `DEMO UI communication port` setting, you can select and input number of item to run the demos, for more details please refer to `simcom_demo.c`/`uart_api.c`/`demo_xx.c`.<br>
